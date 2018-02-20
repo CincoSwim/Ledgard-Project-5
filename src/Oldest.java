@@ -57,6 +57,7 @@ public class Oldest {
         }
 
         new displaysOldest();
+        System.exit(0);
     }
 }
 
