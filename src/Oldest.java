@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.util.*;
+
 public class Oldest {
     static int ageCurrentHighest;
     static String ageAsString;
@@ -24,7 +25,7 @@ public class Oldest {
             f = new JFrame();
 
             ageAsString = JOptionPane.showInputDialog(f, "Enter this person's age:");
-
+            ageCompare = Integer.parseInt(ageAsString);
         }
     }
 
@@ -41,11 +42,15 @@ public class Oldest {
         quitCondition = "quit";
         ageCurrentHighest = 0;
 
-        while (!Objects.equals(nameCompare, quitCondition)){
+        while (!Objects.equals(nameCompare, quitCondition)) {
             new NameInput();
-            new ageInput();
 
-            if (ageCompare > ageCurrentHighest){
+            if (Objects.equals(nameCompare, quitCondition))
+                break;
+            else
+                new ageInput();
+
+            if (ageCompare > ageCurrentHighest) {
                 ageCurrentHighest = ageCompare;
                 nameCurrentHighest = nameCompare;
             }
