@@ -31,7 +31,7 @@ public class CountingChange {
     }
 
 
-    public static int totalCoins() {
+    private static int totalCoins() {
 
         int moneySum;
         int p;
