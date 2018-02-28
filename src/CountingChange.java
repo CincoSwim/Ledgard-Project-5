@@ -1,8 +1,19 @@
+/*
+EECS 1510 Object-Oriented Programming
+Project 5 Part 3
+Written by Christopher Pucko
+
+Prompts the user for an amount of money between 0 and 99 cents. The user is then asked to specify how many dimes,
+nickels, and pennies are in this amount. If the monetary sum is equal, an affirmative is outputted. If the sum is
+incorrect, then one more attempt is given before the program ends.
+ */
+
 import java.util.Scanner;
 
 public class CountingChange {
 
     public static void main(String[] args) {
+
         int targetSum;
         int coinSum;
         Scanner input = new Scanner(System.in);
@@ -30,9 +41,8 @@ public class CountingChange {
         }
     }
 
-
     private static int totalCoins() {
-
+    // Prompts the amount of each coin and finds the monetary sum, returning the value as (int) moneySum
         int moneySum;
         int p;
         int n;
