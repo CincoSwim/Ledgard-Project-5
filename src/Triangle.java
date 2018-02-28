@@ -43,6 +43,7 @@ public class Triangle {
         }
         System.out.print("Thank you for playing! Would you like to try Advanced Mode? (Y/N)");
         quitDialog = input.next();
+
         //Begins Advanced Mode. This is the same as above, except without the [1-20] limiter.
         while (quitDialog.equals("Y") || quitDialog.equals("y")) {
             System.out.print("Great! Please input ANY number: ");
