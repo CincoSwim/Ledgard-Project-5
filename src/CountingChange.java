@@ -40,9 +40,8 @@ public class CountingChange {
             }
         }
     }
-
-    private static int totalCoins() {
     // Prompts the amount of each coin and finds the monetary sum, returning the value as (int) moneySum
+    private static int totalCoins() {
         int moneySum;
         int p;
         int n;
