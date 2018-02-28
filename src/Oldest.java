@@ -1,14 +1,21 @@
+/*
+  EECS 1510 Object-Oriented Programming
+  Project 5 Part 1
+  Written by Christopher Pucko
+
+  Uses JOptionPane frames to ask the user for the names and ages of any number of individuals until the string
+  "quit" is entered. Then, the name of the oldest person in that list is outputted.
+*/
 import javax.swing.*;
 import java.util.*;
 
 public class Oldest {
-    static int ageCurrentHighest;
-    static String ageAsString;
     static int ageCompare;
+    static String ageAsString;
     static String nameCurrentHighest;
     static String nameCompare;
-    static String quitCondition;
 
+    //Creates dialog for Name input
     public static class NameInput {
         JFrame f;
 
@@ -17,7 +24,7 @@ public class Oldest {
             nameCompare = JOptionPane.showInputDialog(f, "Enter a Name, or \"quit\" if finished. ");
         }
     }
-
+    //Creates dialog for Age input, then parses an interger from the input.
     public static class ageInput {
         JFrame f;
 
@@ -28,7 +35,7 @@ public class Oldest {
             ageCompare = Integer.parseInt(ageAsString);
         }
     }
-
+    //Displays the oldest person's age.
     public static class displaysOldest {
         JFrame f;
 
@@ -39,6 +46,9 @@ public class Oldest {
     }
 
     public static void main(String[] args) {
+        int ageCurrentHighest;
+        String quitCondition;
+
         quitCondition = "quit";
         ageCurrentHighest = 0;
 
